@@ -5,11 +5,10 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 const TenureSelect = ({ data, setData }) => {
-
     const handleChange = (event) => {
-      setData({...data, loanTerm: event.target.value});
+        setData({...data, loanTerm: event.target.value});
     };
-  
+
     return (
         <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Tenure</InputLabel>

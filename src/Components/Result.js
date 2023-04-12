@@ -10,11 +10,11 @@ const Result = ({ data }) => {
     const totalLoanMonths = loanTerm * 12;
     const interestPerMonth = interestRate / 100 / 12;
     const monthlyPayment =
-      (loanAmount *
-        interestPerMonth *
-        (1 + interestPerMonth) ** totalLoanMonths) /
-      ((1 + interestPerMonth) ** totalLoanMonths - 1);
-  
+        (loanAmount *
+            interestPerMonth *
+            (1 + interestPerMonth) ** totalLoanMonths) /
+        ((1 + interestPerMonth) ** totalLoanMonths - 1);
+
     const totalInterestGenerated = monthlyPayment * totalLoanMonths - loanAmount;
     const pieChartData = {
         labels: ["Principle", "Interest"],
@@ -28,6 +28,7 @@ const Result = ({ data }) => {
             },
         ],
     };
+
     return (
         <Stack gap={3}>
             <Typography textAlign="center" variant="h5">

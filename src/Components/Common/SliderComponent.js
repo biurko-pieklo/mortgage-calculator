@@ -42,7 +42,7 @@ const SliderComponent = ({
                 </Typography>
             </Stack>
         </Stack>
-    )
+    );
 }
 
 export default SliderComponent;
